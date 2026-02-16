@@ -1,0 +1,60 @@
+# Configuration for actions/labeler - https://github.com/actions/labeler
+
+# Documentation
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: ['docs/**/*', '*.md', 'mkdocs.yaml']
+
+# Infrastructure & Terraform
+infrastructure:
+  - changed-files:
+    - any-glob-to-any-file: ['terraform/**/*', '*.tf', '*.tfvars']
+
+# Kubernetes & Manifests
+kubernetes:
+  - changed-files:
+    - any-glob-to-any-file: ['kubernetes/**/*', 'kustomize/**/*', 'charts/**/*']
+
+# GitOps & ArgoCD
+gitops:
+  - changed-files:
+    - any-glob-to-any-file: ['gitops/**/*']
+
+# Crossplane
+crossplane:
+  - changed-files:
+    - any-glob-to-any-file: ['crossplane/**/*']
+
+# Scripts & Automation
+scripts:
+  - changed-files:
+    - any-glob-to-any-file: ['scripts/**/*']
+
+# CI/CD & Workflows
+ci-cd:
+  - changed-files:
+    - any-glob-to-any-file: ['.github/**/*', '.pre-commit-config.yaml', '.shellcheckrc']
+
+# Configuration
+configuration:
+  - changed-files:
+    - any-glob-to-any-file: ['configs/**/*', '*.yaml', '*.yml', '*.json']
+
+# Security & Policies
+security:
+  - changed-files:
+    - any-glob-to-any-file: ['kyverno/**/*', 'SECURITY.md', 'cosign.*']
+
+# Dependencies
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file: ['requirements/**/*', 'devbox.*', 'package*.json']
+
+# Examples
+examples:
+  - changed-files:
+    - any-glob-to-any-file: ['examples/**/*']
+
+# Release label for PRs targeting main
+release:
+  - base-branch: 'main'
